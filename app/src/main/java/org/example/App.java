@@ -4,11 +4,34 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        // Create a bunch of objects that conform to the Cutie interface
+Puppy puppy = new Puppy();
+Kitty kitty = new Kitty();
+PygmyMarmoset marmoset = new PygmyMarmoset();
+ 
+// Create a queue data structure
+QueueTee queue = new QueueTee();
+ 
+// The size of the queue should equal zero since there are no objects in it
+queue.size();
+ 
+// Add the cuties to the queue
+queue.enqueue(puppy);
+queue.enqueue(kitty);
+queue.enqueue(marmoset);
+ 
+// The size of the queue should equal three since there are three objects in it
+queue.size();
+ 
+// The first dequeue should return the puppy
+queue.dequeue();
+ 
+// The second dequeue should return the kitty
+queue.dequeue();
+ 
+// The first dequeue should return the pygmy marmoset
+queue.dequeue();
     }
 }
